@@ -32,4 +32,4 @@ def game(left, right) -> int:
 
     return 6 if sl == (sr - 2) % 3 + 1 else 0
     
-print(sum(game(x[0], choose(x[0], x[1])) + scores[ choose(x[0], x[1])] for x in guide))
+print(sum(game(x[0], choose(x[0], x[1])) + scores[choose(x[0], x[1])] for x in guide))
