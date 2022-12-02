@@ -23,7 +23,6 @@ def choose(left, right) -> str:
             return p
     
 
-
 def game(left, right) -> int:
     sl = scores[left]
     sr = scores[right]
