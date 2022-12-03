@@ -1,12 +1,14 @@
+from typing import Dict, List, Literal, Union
+
 from util import get_data
 
-guide = get_data(("\n", " "))
+guide: List[List[str]] = get_data(("\n", " "))
 # guide = [
 #     ["A", "Y"],
 #     ["B", "X"],
 #     ["C", "Z"]
 # ]
-scores = {
+scores: Dict[str, int] = {
     "A": 1,
     "B": 2,
     "C": 3,
@@ -16,16 +18,16 @@ scores = {
 }
 
 
-def choose(left, right) -> str:
+def choose(left: Union[Literal["A"], Literal["B"], Literal["C"]], right: Union[Literal["X"], Literal["Y"], Literal["Z"]]) -> str:
     for p in "XYZ":
-        s = game(left, p)
+        s: int = game(left, p)
         if (right == "X" and s == 0) or (right == "Y" and s == 3) or (right == "Z" and s == 6):
             return p
     
 
-def game(left, right) -> int:
-    sl = scores[left]
-    sr = scores[right]
+def game(left: Union[Literal["A"], Literal["B"], Literal["C"]], right: Union[Literal["X"], Literal["Y"], Literal["Z"]]) -> int:
+    sl: int = scores[left]
+    sr: int = scores[right]
     if sl == sr:
         return 3
 

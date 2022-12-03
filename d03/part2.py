@@ -27,11 +27,13 @@ prio = 0
 while data:
     lines = data[:3]
     data = data[3:]
-    lines = list(map(set, lines))
+    
+    lines = list(map(set, lines))    
     all_elves = set(ascii_letters)
     for set_ in lines:
         all_elves &= set_
         print(set_)
+        
     print(all_elves)
     prio += get_prio(all_elves)
     
