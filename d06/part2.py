@@ -5,16 +5,6 @@ d = get_data("\n")
 # d = ["bvwbjplbgvbhsrlpgdmjqwftvncz"]
 print(d)
 
-add = 0
-for data in d:
-    if not data:
-        continue
-    for i in range(len(data[:-4])):
-        if len(set(data[i:i+4])) == 4:
-            add += i + 4
-            break
-print(add)
-
 m = 0
 for data in d:
     if not data: continue
