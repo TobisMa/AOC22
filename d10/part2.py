@@ -189,4 +189,4 @@ for line in data:
         crt.addx(int(line.split()[-1]))
 
 for row in crt.area:
-    print(''.join(row))
+    print(' '.join(row))
